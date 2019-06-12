@@ -1,0 +1,11 @@
+server:
+  port: 7003
+eureka:
+  instance:
+    hostname: eureka7003.com #eureka服务端端实例名称
+  client:
+    register-with-eureka: true #false 表示不向注册中心注册自己
+    fetch-registry: false #表示自己是注册中心 不需要去检索服务
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #对外暴露注册的地址
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/ #对外暴露注册的地址 指定集群的其他注册地址

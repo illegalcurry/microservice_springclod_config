@@ -13,11 +13,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 @ToString
 @Accessors(chain=true)
-public class Dept implements Serializable {
+public class Employee implements Serializable {
 
-//    @JestId
-    private long dno;
-    private String dName;
+    //@JestId
+    private long eno;
+    private String eName;
     private String dbSource;
 
 }
